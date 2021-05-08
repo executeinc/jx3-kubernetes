@@ -8,6 +8,8 @@ data:
     in_repo_config:
       enabled:
         executeinc/jx3-kubernetes: true
+        executeinc/node-http-jx-quickstart: true
+        ksully-execute/node-http-jx-quickstart: true
     plank: {}
     pod_namespace: jx
     prowjob_namespace: jx
@@ -20,6 +22,8 @@ data:
         skip-unknown-contexts: false
       merge_method:
         executeinc/jx3-kubernetes: merge
+        executeinc/node-http-jx-quickstart: merge
+        ksully-execute/node-http-jx-quickstart: merge
       queries:
       - labels:
         - approved
@@ -31,6 +35,8 @@ data:
         - needs-rebase
         repos:
         - executeinc/jx3-kubernetes
+        - executeinc/node-http-jx-quickstart
+        - ksully-execute/node-http-jx-quickstart
       - labels:
         - updatebot
         missingLabels:
@@ -41,6 +47,8 @@ data:
         - needs-rebase
         repos:
         - executeinc/jx3-kubernetes
+        - executeinc/node-http-jx-quickstart
+        - ksully-execute/node-http-jx-quickstart
       target_url: http://dashboard-jx.jx.executeinc.com
 kind: ConfigMap
 metadata:

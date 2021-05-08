@@ -1,0 +1,22 @@
+apiVersion: jenkins.io/v1
+kind: SourceRepository
+metadata:
+  creationTimestamp: null
+  labels:
+    owner: ksully-execute
+    provider: github
+    repository: node-http-jx-quickstart
+    gitops.jenkins-x.io/pipeline: 'namespaces'
+  name: ksully-execute-node-http-jx-quickstart
+  namespace: jx
+spec:
+  httpCloneURL: https://github.com/ksully-execute/node-http-jx-quickstart.git
+  org: ksully-execute
+  provider: https://github.com
+  providerKind: github
+  providerName: github
+  repo: node-http-jx-quickstart
+  scheduler:
+    kind: ""
+    name: in-repo
+  url: https://github.com/ksully-execute/node-http-jx-quickstart

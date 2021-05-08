@@ -6,6 +6,14 @@ data:
       repos:
       - executeinc/jx3-kubernetes
       require_self_approval: true
+    - lgtm_acts_as_approve: true
+      repos:
+      - executeinc/node-http-jx-quickstart
+      require_self_approval: true
+    - lgtm_acts_as_approve: true
+      repos:
+      - ksully-execute/node-http-jx-quickstart
+      require_self_approval: true
     cat: {}
     cherry_pick_unapproved: {}
     config_updater:
@@ -19,6 +27,12 @@ data:
       executeinc/jx3-kubernetes:
       - endpoint: http://cd-indicators.jx.svc.cluster.local/lighthouse/events
         name: cd-indicators
+      executeinc/node-http-jx-quickstart:
+      - endpoint: http://cd-indicators.jx.svc.cluster.local/lighthouse/events
+        name: cd-indicators
+      ksully-execute/node-http-jx-quickstart:
+      - endpoint: http://cd-indicators.jx.svc.cluster.local/lighthouse/events
+        name: cd-indicators
     heart: {}
     label:
       additional_labels: null
@@ -26,6 +40,38 @@ data:
     plugins:
       executeinc/jx3-kubernetes:
       - config-updater
+      - approve
+      - assign
+      - blunderbuss
+      - help
+      - hold
+      - lgtm
+      - lifecycle
+      - override
+      - size
+      - trigger
+      - wip
+      - heart
+      - cat
+      - dog
+      - pony
+      executeinc/node-http-jx-quickstart:
+      - approve
+      - assign
+      - blunderbuss
+      - help
+      - hold
+      - lgtm
+      - lifecycle
+      - override
+      - size
+      - trigger
+      - wip
+      - heart
+      - cat
+      - dog
+      - pony
+      ksully-execute/node-http-jx-quickstart:
       - approve
       - assign
       - blunderbuss
@@ -53,6 +99,14 @@ data:
     - repos:
       - executeinc/jx3-kubernetes
       trusted_org: todo
+    - repos:
+      - executeinc/node-http-jx-quickstart
+      trusted_org: todo
+    - repos:
+      - ksully-execute/node-http-jx-quickstart
+      trusted_org: todo
+    welcome:
+    - message_template: Welcome
 kind: ConfigMap
 metadata:
   creationTimestamp: null
